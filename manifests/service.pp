@@ -15,7 +15,8 @@ class unbound::service {
   }
 
   service { $unbound::params::service:
-    ensure => running,
+    ensure    => running,
+    hasstatus => $unbound::params::hasstatus,
     subscribe => File[$unbound::params::config],
   }
 }

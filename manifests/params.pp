@@ -3,6 +3,7 @@ class unbound::params {
     'OpenBSD': {
       $package = 'unbound'
       $service = 'unbound'
+      $hasstatus = true
       $dir = '/var/unbound/etc'
       $logfile = '/var/unbound/dev/log'
       $control_setup = '/usr/local/sbin/unbound-control-setup'
@@ -15,6 +16,7 @@ class unbound::params {
     'ubuntu', 'debian': {
       $package = 'unbound'
       $service = 'unbound'
+      $hasstatus = false
       $dir = '/etc/unbound'
       $logfile = ''
       $control_setup = '/usr/sbin/unbound-control-setup'
