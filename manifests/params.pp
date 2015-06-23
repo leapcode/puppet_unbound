@@ -16,7 +16,7 @@ class unbound::params {
     'ubuntu', 'debian': {
       $package = 'unbound'
       $service = 'unbound'
-      $hasstatus = false
+      $hasstatus = true
       $dir = '/etc/unbound'
       $logfile = ''
       $control_setup = '/usr/sbin/unbound-control-setup'
