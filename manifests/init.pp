@@ -109,8 +109,9 @@ class unbound (
   }
 
   concat::fragment { 'unbound server':
-    target => $unbound::params::config,
+    target  => $unbound::params::config,
     content => template('unbound/unbound.conf.erb'),
-    order => 1,
+    order   => 1,
+    notify  => Service[$unbound::params::service]
   }
 }

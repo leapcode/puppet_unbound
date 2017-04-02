@@ -25,8 +25,9 @@ define unbound::stub (
   $real_settings = { stub-zone => merge($zone_name, $settings) }
 
   concat::fragment { "unbound ${title}":
-    target => $unbound::params::config,
+    target  => $unbound::params::config,
     content => template('unbound/unbound.conf.erb'),
-    order => 2,
+    order   => 2,
+    notify  => Service[$unbound::params::service]
   }
 }

@@ -25,8 +25,9 @@ define unbound::forward (
   $real_settings = { forward-zone => merge($zone_name, $settings) }
 
   concat::fragment { "unbound ${title}":
-    target => $unbound::params::config,
+    target  => $unbound::params::config,
     content => template('unbound/unbound.conf.erb'),
-    order => 3,
+    order   => 3,
+    notify  => Service[$unbound::params::service]
   }
 }
