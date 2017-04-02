@@ -1,4 +1,3 @@
-include concat::setup
 include unbound::params
 unbound::stub { 'example.com':
   settings => {

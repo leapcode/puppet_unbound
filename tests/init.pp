@@ -8,7 +8,6 @@
 #
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
-include concat::setup
 include unbound::package
 include unbound::service
 include unbound::anchor

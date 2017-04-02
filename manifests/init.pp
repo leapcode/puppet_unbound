@@ -82,7 +82,6 @@ class unbound (
   $ssl = true,
 ) inherits unbound::params {
 
-  include concat::setup
   include unbound::package
   include unbound::service
 

@@ -1,4 +1,3 @@
-include concat::setup
 include unbound
 unbound::forward { 'example.com':
   settings => {
